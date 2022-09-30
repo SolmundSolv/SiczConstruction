@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    /* border: solid 1px red; */
+}
+
+.map-responsive{
+
+    overflow:hidden;
+
+    padding-bottom:25%;
+
+    position:relative;
+
+    height:0;
+
+}
+
+.map-responsive iframe{
+
+    left:0;
+
+    top:0;
+
+    height:100%;
+
+    width:100%;
+
+    position:absolute;
+
+}
+
+#toggle-navbar{
+    background: url("/assets/icons8-menu-30.svg");
+    background-repeat: no-repeat;
+    z-index: 9999;
+}
+@media (max-width: 767px) {
+    #navigation-bar{
+        position: fixed;
+        inset: 0 30% 0 0;
+        font-size: 1.125rem;
+        flex-direction: column;
+        z-index: 9998;
+        padding-top: 4rem;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 150ms;
+    } 
+  
+    #navigation-bar[data-visible="true"]{
+        transform: translateX(0%);
+    }
+    #navigation-bar[data-visible="false"]{
+        transform: translateX(-100%);
+    }
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %>
+    <body>
+        <%- include('./partials/navbar') %>
+        <div class="pt-24 md:pt-2 bg-gray-100 dark:bg-gray-700 dark:text-gray-100">
+            <div class="grid lg:grid-cols-2 grid-cols-1 auto-rows-min gap-6 mx-auto max-w-7xl p-6">
+                <div class="col-span-2 w-full">
+                    <img class="w-full h-auto" src="../assets/img/cfded36363-Drogi%20i%20place%20betonowe%202.jpg" alt="" />
+                </div>
+                <div class="w-full flex flex-col items-center h-fit col-span-2 md:col-span-1">
+                    <h1 class="text-2xl font-bold my-6">Formularz kontaktowy:</h1>
+                    <div class="mt-10 sm:mt-0 w-full">
+                        <div class="md:grid md:grid-cols-2 md:gap-6">
+                            <div class="mt-5 md:col-span-2 md:mt-0 px-8">
+                                <form id="contact-form">
+                                    <div class="overflow-hidden shadow sm:rounded-md">
+                                        <div class="bg-white px-4 py-5 sm:p-6">
+                                            <div class="grid grid-cols-6 gap-6">
+                                                <div class="col-span-6 sm:col-span-6">
+                                                    <label for="name" class="block text-sm font-medium text-gray-700">Imie i Nazwisko*</label>
+                                                    <input
+                                                        type="text"
+                                                        name="name"
+                                                        id="name"
+                                                        required
+                                                        autocomplete="name"
+                                                        class="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-[#faa71a] focus:ring-[#faa71a] sm:text-sm"
+                                                    />
+                                                </div>
+                                                <div class="col-span-6 sm:col-span-6">
+                                                    <label for="email" class="block text-sm font-medium text-gray-700">E-mail*</label>
+                                                    <input
+                                                        type="email"
+                                                        name="email"
+                                                        id="email"
+                                                        required
+                                                        class="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-[#faa71a] focus:ring-[#faa71a] sm:text-sm"
+                                                    />
+                                                </div>
+                                                <div class="col-span-6 sm:col-span-6">
+                                                    <label for="company" class="block text-sm font-medium text-gray-700">Firma</label>
+                                                    <input
+                                                        type="text"
+                                                        name="company"
+                                                        id="company"
+                                                        class="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-[#faa71a] focus:ring-[#faa71a] sm:text-sm"
+                                                    />
+                                                </div>
+
+                                                <div class="col-span-6">
+                                                    <label for="content" class="block text-sm font-medium text-gray-700">Treść*</label>
+                                                    <textarea
+                                                        name="content"
+                                                        id="content"
+                                                        required
+                                                        cols="30"
+                                                        rows="10"
+                                                        class="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-[#faa71a] focus:ring-[#faa71a] sm:text-sm"
+                                                    ></textarea>
+                                                </div>
+                                                <span class="text-sm font-medium text-gray-600 col-span-3">* - pole wymagane</span>
+                                            </div>
+                                        </div>
+                                        <div class="bg-gray-50 px-4 py-3 text-right sm:px-6">
+                                            <button
+                                                type="submit"
+                                                class="inline-flex justify-center rounded-md border border-transparent bg-[#faa71a] py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-[#faa71a] focus:outline-none focus:ring-2 focus:ring-[#faa71a] focus:ring-offset-2"
+                                            >
+                                                Wyślij
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full flex flex-col p-6">
+                    <h1 class="text-2xl font-bold my-6">Informacje dodatkowe:</h1>
+                    <div class="my-6 flex flex-col gap-2">
+                        <div>
+                            <p><span class="font-bold">Inżynier budowy</span> mgr inż. Piotr Kucab</p>
+                            <p class="font-bold">786 866 767</p>
+                            <p class="font-bold">pkucab@sicz.eu</p>
+                        </div>
+                        <div>
+                            <p><span class="font-bold">Kosztorysant</span> mgr inż. Jarosław Kołacz</p>
+                            <p class="font-bold">508 263 503</p>
+                            <p class="font-bold">jkolacz@sicz.eu</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-2 p-6">
+                    <div class="map-responsive">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5008.297918819272!2d22.800455660914796!3d49.75735987252444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473b78bf4a12f789%3A0x5b7aa95d570370cf!2sSicz%20Construction!5e0!3m2!1sen!2spl!4v1663673079598!5m2!1sen!2spl"
+                            height="400"
+                            style="border: 1"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include('./partials/footer')%>
+    </body>
+    <%- include('./partials/scripts')%>
+    <script src="/js/contact-form.js"></script>
+</html>

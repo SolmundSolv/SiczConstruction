@@ -1,0 +1,76 @@
+<button id="toggle-navbar" class="fixed z-50 top-8 left-8 w-8 aspect-square md:hidden" aria-controls="navigation-bar" aria-expanded="false">
+    <svg id="toggle-navbar-light" class="hidden w-8 h-8" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30px" height="30px">
+        <path
+            d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z"
+        />
+    </svg>
+    <svg id="toggle-navbar-dark" class="hidden w-8 h-8" fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30px" height="30px">
+        <path
+            d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z"
+        />
+    </svg>
+    <span class="sr-only">Menu</span>
+</button>
+<nav id="navigation-bar" class="bg-white dark:bg-gray-900" data-visible="false">
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="flex flex-col h-32 md:flex-row items-stretch">
+            <div class="flex flex-col py-4 md:flex-row lg:justify-between w-full md:items-stretch">
+                <a href="/<%=lang.id%>" class="flex flex-col md:items-center md:flex-row">
+                    <img class="aspect-square mx-auto w-auto lg:block max-w-[100px]" src="https://sicz.eu/onewebstatic/6208a9db93-Logo%20Sicz%20Const.png" alt="Your Company" />
+                </a>
+                <div class="flex flex-col items-stretch md:flex-row pt-6">
+                    <div class="flex flex-col md:space-x-4 items-center md:items-end md:flex-row dark:text-gray-300">
+                        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                        <a href="/<%=lang.id%>" class="hover:bg-[#faa71a] dark:hover:bg-gray-900 dark:hover:text-[#faa71a] px-3 py-2 rounded-md font-medium"><%= lang.nav_about%></a>
+
+                        <a href="galeria" class="hover:bg-[#faa71a] dark:hover:bg-gray-900 dark:hover:text-[#faa71a] px-3 py-2 rounded-md font-medium"><%= lang.nav_gallery%></a>
+
+                        <a href="kontakt" class="hover:bg-[#faa71a] dark:hover:bg-gray-900 dark:hover:text-[#faa71a] px-3 py-2 rounded-md font-medium"><%= lang.nav_contact%></a>
+
+                        <a href="realizacje" class="hover:bg-[#faa71a] dark:hover:bg-gray-900 dark:hover:text-[#faa71a] px-3 py-2 rounded-md font-medium"><%= lang.nav_realization%></a>
+                        <a href="#" class="hover:bg-[#faa71a] dark:hover:bg-gray-900 dark:hover:text-[#faa71a] px-3 py-2 rounded-md font-medium"><%= lang.nav_offers%></a>
+                        <a href="#" class="hover:bg-[#faa71a] dark:hover:bg-gray-900 dark:hover:text-[#faa71a] px-3 py-2 rounded-md font-medium"><%= lang.nav_products%></a>
+                    </div>
+                </div>
+                <div class="items-stretch justify-center md:justify-end pt-4 md:ml-6 flex gap-4">
+                    <button id="theme-toggle" type="button" class="transition-colors text-gray-500 dark:text-gray-400 hover:bg-gray-800 dark:hover:bg-gray-100 rounded-lg text-sm p-2.5">
+                        <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                        <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                            ></path>
+                        </svg>
+                        <span class="sr-only">Dark Mode</span>
+                    </button>
+                    <div class="flex flex-col gap-2 md:justify-end">
+                        <a href="/pl" class="h-5 w-8">
+                            <img
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARwAAACxCAMAAAAh3/JWAAAADFBMVEX////cFDzup6/bAC47xqeuAAAA0UlEQVR4nO3QMQHAMAzAsLTjz3kI4qO3BEEzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPLms5mM1h5WcICfICXKCnCAnyAlygpwgJ8gJcoKcICfICXKCnCAnyAlygpwgJ8gJcoKcICfICXKCnCAnyAlygpwgJ8gJcoKcICfICXKCnCAnyAlygpwgJ8gJcoKcICfICXKCnCAnyAlygpwgJ8gJcoKcICfICXKCnCAnyAlygpwgJ8gJcoKcICfICXKCnCAnyAlygpwgJ8gJcoKcICf8zMtmEUHJBe8AAAAASUVORK5CYII="
+                                alt="polish"
+                                class="h-5 w-8 border border-black"
+                            />
+                        </a>
+                        <div class="h-5 w-8">
+                            <img
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAAAD1BMVEUAW7v/1QAAVcCXnG//2QBnn3bXAAAAzUlEQVR4nO3QsQGAMAzAsBT4/2b2eO0onaAZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACASx62ednmY5vD5qSclJNyUk7KSTkpJ+WknJSTclJOykk5KSflpJyUk3JSTspJOSkn5aSclJNyUk7KSTkpJ+WknJSTclJOykk5KSflpJyUk3JSTspJOSkn5aSclJNyUk7KSTkpJ+WknJSTclJOykk5KSflpJyUk3JSTspJOSkn5aSclJNyUk7KSTkpJ+WknJSTclJOykk5KSflpH7zk2pa0LCuDAAAAABJRU5ErkJggg=="
+                                alt="ukraine"
+                                class="h-5 w-8 border border-black"
+                            />
+                        </div>
+                        <a href="/en" class="h-5 w-8">
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/255px-Flag_of_the_United_Kingdom.svg.png"
+                                alt="english"
+                                class="h-5 w-8 border border-black"
+                            />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
