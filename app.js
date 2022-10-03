@@ -13,7 +13,7 @@ const app = express();
 mongoose
     .connect(DBURI)
     .then(() => {
-        app.listen(3000);
+        app.listen(3001);
         console.log("conected to db");
     })
     .catch((err) => {
